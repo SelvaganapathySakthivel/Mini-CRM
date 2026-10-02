@@ -1,0 +1,93 @@
+.table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+
+  [align='right'] > * {
+    text-align: end;
+  }
+  [align='center'] > * {
+    text-align: center;
+  }
+
+  thead {
+    text-transform: uppercase;
+    color: #2F2B3D;
+    background-color: #F8F7FA;
+    border-top: 1px solid rgba(47, 43, 61, 0.12);
+    border-bottom: 1px solid rgba(47, 43, 61, 0.12);
+
+    th {
+      font-weight: 600;
+      font-size: 0.8125rem;
+      letter-spacing: 0.2px;
+      line-height: 1.8462;
+      text-align: start;
+      height: 54px;
+      padding: 0.75rem 1.25rem;
+      color: #2F2B3D;
+
+      &:not(:first-of-type):not(:last-of-type) {
+        padding-block: 0.75rem;
+        padding-inline: 1.25rem;
+      }
+      &:first-of-type {
+        padding-inline-start: 1.25rem;
+      }
+      &:last-of-type {
+        padding-inline-end: 1.25rem;
+      }
+    }
+  }
+
+  tbody {
+    color: #6D6777;
+
+    th,
+    td {
+      font-size: 0.875rem;
+      line-height: 1.4667;
+      height: 50px;
+      padding: 0.75rem 1.25rem;
+      color: #2F2B3D;
+
+      &:not(:first-of-type):not(:last-of-type) {
+        padding-block: 0.75rem;
+        padding-inline: 1.25rem;
+      }
+      &:first-of-type {
+        padding-inline-start: 1.25rem;
+      }
+      &:last-of-type {
+        padding-inline-end: 1.25rem;
+      }
+    }
+
+    tr:not(:last-child) {
+      border-bottom: 1px solid rgba(47, 43, 61, 0.08);
+    }
+    tr {
+      border-top: 1px solid rgba(47, 43, 61, 0.08);
+      transition: background-color 0.15s ease;
+      &:hover {
+        background-color: rgba(47, 43, 61, 0.03);
+      }
+    }
+  }
+}
+
+.cellWithInput input {
+  inline-size: 100%;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  border-radius: 6px;
+  padding-block: 6px;
+  padding-inline: 10px;
+  margin-inline: -10px;
+
+  &:focus-visible {
+    outline: 1px solid #7367F0;
+  }
+}
